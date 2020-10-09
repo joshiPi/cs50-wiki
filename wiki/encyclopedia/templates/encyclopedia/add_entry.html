@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save_entry</title>
+</head>
+
+<body>
+    <h2>Save Entry</h2>
+    <form action="{% url 'encyclopedia:save' %}" method="POST">
+        {% csrf_token %}
+        <div>
+
+            Title<input style='display: inline-block;margin: 20px;' type='text' name='title' placeholder='title'>
+        </div>
+
+        <p>Content</p>
+        <textarea style='width: 80%;height: 200px;' placeholder="Describe your topic..." name='content'></textarea>
+
+        <hr>
+        <button> Submit </button>
+    </form>
+</body>
+
+</html>
